@@ -15,6 +15,7 @@ class LRUCache:
         # TODO: implement this function
         self.this = {}
         self.item_limit = item_limit
+        print("howdy doody")
 
     def has(self, key: str) -> bool:
         # TODO: implement this function
