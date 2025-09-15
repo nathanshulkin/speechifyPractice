@@ -12,23 +12,18 @@ class LRUCache:
     """
 
     def __init__(self, item_limit: int):
-        # TODO: implement this function
         self.this = {}
         self.item_limit = item_limit
         print("howdy doody")
 
     def has(self, key: str) -> bool:
-        # TODO: implement this function
-        if key not in self:
+        if key not in self.this:
             return False
         else:
             return True
 
     def get(self, key: str) -> Optional[Any]:
-        # TODO: implement this function
         if key in self.this:
-            print(self.this)
-            print(self.this[key])
             return self.this[key]
         else:
             return None
@@ -36,5 +31,11 @@ class LRUCache:
     def set(self, key: str, value: Any):
         # TODO: implement this function
         if len(self.this) == self.item_limit:
+            print(self.this)
+            for x in self.this:
+                print(x)
+                print(self.this[x])
+                # self.this.update({x: self.this[x]})
             self.this.popitem()
+            print(self.this)
         self.this.update({key: value})
